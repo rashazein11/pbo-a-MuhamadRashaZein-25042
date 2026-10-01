@@ -7,12 +7,12 @@ declare(strict_types=1);
  */
 class Mahasiswa
 {
-    public const float BOBOT_TUGAS = 0.30;
-    public const float BOBOT_UTS   = 0.30;
-    public const float BOBOT_UAS   = 0.40;
+    public const BOBOT_TUGAS = 0.30;
+    public const BOBOT_UTS   = 0.30;
+    public const BOBOT_UAS   = 0.40;
 
-    private const float NILAI_MIN = 0;
-    private const float NILAI_MAX = 100;
+    private const NILAI_MIN = 0;
+    private const NILAI_MAX = 100;
 
     /**
      * Constructor property promotion (PHP 8):
