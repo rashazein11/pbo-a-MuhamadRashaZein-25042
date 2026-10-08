@@ -1,40 +1,40 @@
-# **Mengapa Penolakan Saat Kompilasi Menguntungkan?**
+# Keputusan Desain - Praktikum 06
+## Muhamad Rasha Zein
+## NPM : 4525210042
 
-- **Type Safety:** Menangkap kesalahan logika atau tipe data lebih awal sebelum program dijalankan (runtime).
+## Langkah 4: Penolakan saat Kompilasi
 
-- **Mencegah Crash:** Menghindari kegagalan program di lingkungan produksi (seperti ClassCastException).
+Setelah kelas `Sepeda` dibuat, saya mencoba memanggil `isiPenuh(sepeda)` di `Main.java`.
+Compiler menolaknya dengan pesan kesalahan berikut:
 
-- **Feedback Cepat:** Developer langsung mengetahui batas kemampuan suatu objek tanpa perlu melakukan manual testing.
-
-## **Output Exception**
-
-## JAVA OUTPUT
-
-```output
-$ javac Main.java
-Main.java:36: error: incompatible types: Sepeda cannot be converted to Fuelable
-        isiPenuh(sepeda);
-                 ^
-Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
-1 error
+```
+The method isiPenuh(Fuelable) in the type Main is not applicable for the arguments (Sepeda)
 ```
 
----
+### Mengapa penolakan saat kompilasi itu menguntungkan
 
-## PHP OUTPUT
+Method `isiPenuh` menerima parameter bertipe `Fuelable`, bukan `Mobil`. Artinya method ini
+hanya peduli pada kontrak, yaitu objek harus bisa diisi bahan bakar, dan tidak peduli
+kelas konkretnya. `Sepeda` hanya mengimplementasikan `Movable`, tidak `Fuelable`, karena
+sepeda memang tidak punya tangki bahan bakar. Jadi compiler menolak objek `Sepeda`
+sebelum program dijalankan.
 
-```output
-[10:43:14] Mobil: mengisi bahan bakar
-  Diisi penuh Bensin — biaya Rp540.000
-PHP Fatal error:  Uncaught TypeError: isiPenuh(): Argument #1 ($kendaraan) must be of type Fuelable, Sepeda given, called in D:\Praktikum_PBO_A_MochammadJihanIsfalana_4525210110\pertemuan06\src\starter\php\main.php on line 31 and defined in D:\Praktikum_PBO_A_MochammadJihanIsfalana_4525210110\pertemuan06\src\starter\php\main.php:7
-Stack trace:
-#0 D:\Praktikum_PBO_A_MochammadJihanIsfalana_4525210110\pertemuan06\src\starter\php\main.php(31): isiPenuh(Object(Sepeda))
-#1 {main}
-  thrown in D:\Praktikum_PBO_A_MochammadJihanIsfalana_4525210110\pertemuan06\src\starter\php\main.php on line 7
+Menurut saya ini menguntungkan karena:
 
-Fatal error: Uncaught TypeError: isiPenuh(): Argument #1 ($kendaraan) must beof type Fuelable, Sepeda given, called in D:\Praktikum_PBO_A_MochammadJihanIsfalana_4525210110\pertemuan06\src\starter\php\main.php on line 31 and defined in D:\Praktikum_PBO_A_MochammadJihanIsfalana_4525210110\pertemuan06\src\starter\php\main.php:7
-Stack trace:
-#0 D:\Praktikum_PBO_A_MochammadJihanIsfalana_4525210110\pertemuan06\src\starter\php\main.php(31): isiPenuh(Object(Sepeda))
-#1 {main}
-  thrown in D:\Praktikum_PBO_A_MochammadJihanIsfalana_4525210110\pertemuan06\src\starter\php\main.php on line 7
-```
+1. **Kesalahan ketahuan lebih awal.** Saya langsung diberi tahu saat menulis kode, bukan
+   setelah program berjalan dan crash di depan pengguna.
+2. **Tidak ada pemanggilan yang tidak masuk akal.** Tidak mungkin ada kode yang
+   memanggil `isiBahanBakar` pada kendaraan yang tidak punya tangki.
+3. **Tidak perlu pengecekan manual.** Saya tidak perlu menulis `if (kendaraan instanceof ...)`
+   di dalam method, karena sistem tipe sudah menjamin hanya objek `Fuelable` yang masuk.
+4. **Mudah dikembangkan.** Kelas baru yang `implements Fuelable` otomatis bisa dipakai
+   di `isiPenuh` tanpa mengubah method tersebut.
+
+Setelah pesan kesalahan saya salin, baris `isiPenuh(sepeda);` saya jadikan komentar
+supaya program tetap bisa dikompilasi dan dijalankan.
+
+## Perbandingan dengan PHP
+
+Di PHP, kesalahan serupa baru muncul saat program dijalankan (runtime), yaitu
+berupa `TypeError`, karena PHP tidak punya tahap kompilasi yang memeriksa tipe sebelum
+eksekusi. Di Java kesalahan tipe ditolak sebelum program bisa berjalan, sehingga lebih aman.
