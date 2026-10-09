@@ -1,6 +1,6 @@
 # Panduan Laporan Sebelum & Sesudah — PBO A (Muhamad Rasha Zein, 4525210042)
 
-## 1. Struktur folder (tanpa `.DS_Store`, `__MACOSX`, `.git`)
+## 1. Struktur folder 
 
 ```
 pbo-a-MuhamadRashaZein-25042/
@@ -31,15 +31,7 @@ pbo-a-MuhamadRashaZein-25042/
     └── prak06/  src/java (+Sepeda), src/php, bin, .vscode, README.md, keputusan.md
 ```
 
-## 2. Prasyarat
-
-```bash
-java -version    # JDK 17+
-javac -version
-php -v           # PHP 8.1+
-```
-
-## 3. Cara run — SEBELUM
+## 2. Cara run — SEBELUM
 
 Semua perintah dijalankan dari folder `Materi-Pembelajaran&Codingan-sebelumdibenerin/codingansebelum/`.
 Tanda kutip wajib karena nama folder memuat `&`.
@@ -52,7 +44,7 @@ Tanda kutip wajib karena nama folder memuat `&`.
 | 05 | `cd pertemuan05`<br>`javac *.java && java Main` (juga `java AntiPattern`) | `php pertemuan05/main.php`<br>`php pertemuan05/notifikasi.php` |
 | 06 | `cd pertemuan06/06-abstract-class-interface-enum-dan-trait/starter/java`<br>`javac *.java && java -Dfile.encoding=UTF-8 Main` | `php pertemuan06/06-abstract-class-interface-enum-dan-trait/starter/php/main.php` |
 
-## 4. Cara run — SESUDAH
+## 3. Cara run — SESUDAH
 
 Dari folder `pbo-a-MuhamadRashaZein-25042/pbo-a-MuhamadRashaZein-25042/`.
 
@@ -66,7 +58,7 @@ Dari folder `pbo-a-MuhamadRashaZein-25042/pbo-a-MuhamadRashaZein-25042/`.
 
 Windows CMD: ganti `src/java/*.java` dengan `src\java\*.java` bila perlu, dan jalankan `chcp 65001` agar karakter `—` tampil.
 
-## 5. Yang di-screenshot & hasil yang diharapkan
+## 4. Yang di-screenshot & hasil yang diharapkan
 
 Hasil di bawah sudah saya jalankan sendiri (JDK 21, PHP 8.3).
 
@@ -80,7 +72,7 @@ Hasil di bawah sudah saya jalankan sendiri (JDK 21, PHP 8.3).
 
 Tambahan untuk pert. 04 (sebelum): sekalian screenshot pesan error kompilasi dari percobaan di `catatan.md` bila dosen memintanya. Untuk pert. 06 (sesudah): screenshot `keputusan.md` dan error saat `isiPenuh(sepeda)` dibuka komentarnya.
 
-## 6. Temuan pada kode SESUDAH (sebaiknya diperbaiki sebelum screenshot)
+## 5. Temuan pada kode SESUDAH (sebaiknya diperbaiki sebelum screenshot)
 
 1. **prak03 PHP**: `RekeningBank.php` masih TODO, dan `main.php` adalah salinan prak02 (memanggil `Mahasiswa.php` yang tidak ada di prak03) → Fatal error. `main.php` sebaiknya memakai isi `pertemuan03/main.php` dari folder sebelum.
 2. **prak03 Java**: constructor ringkas belum `this(nomor, pemilik, 0)`, penghitung jadi `2` (harusnya `3`); validasi nomor kosong & saldo awal negatif belum ada.
