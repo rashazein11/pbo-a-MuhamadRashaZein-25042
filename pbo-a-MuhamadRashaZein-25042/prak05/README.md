@@ -51,6 +51,28 @@ Daftar bangun diproses dengan tipe dasar `BangunDatar`; tiap objek menyediakan p
 
 ![Hasil PHP setelah perbaikan](../../ssan-setelah/ssan-php-setelah/prak-setelah-php-05.png)
 
+## Screenshot kode sumber
+
+### Java — Main.java
+
+#### Sebelum
+
+![Kode Main.java sebelum perbaikan](../../ss-codingan-sebelum/java/prak05-Main.png)
+
+#### Sesudah
+
+![Kode Main.java sesudah perbaikan](../../ss-codingan-sesudah/java/prak05-Main.png)
+
+### PHP — main.php
+
+#### Sebelum
+
+![Kode main.php sebelum perbaikan](../../ss-codingan-sebelum/php/prak05-main.png)
+
+#### Sesudah
+
+![Kode main.php sesudah perbaikan](../../ss-codingan-sesudah/php/prak05-main.png)
+
 ### Kesimpulan
 
 Polimorfisme memungkinkan daftar objek diproses melalui tipe induk tanpa memeriksa kelas konkret untuk setiap operasi. Pada hasil Java yang tersedia, daftar utama masih memuat lingkaran dan persegi, sedangkan hasil PHP juga menampilkan segitiga dan trapesium.

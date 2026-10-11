@@ -51,6 +51,28 @@ Implementasi PHP menyediakan kontrak `Movable` dan `Fuelable`, enum biaya bahan 
 
 ![Hasil PHP setelah perbaikan](../../ssan-setelah/ssan-php-setelah/prak-setelah-php-06.png)
 
+## Screenshot kode sumber
+
+### Java — Mobil.java
+
+#### Sebelum
+
+![Kode Mobil.java sebelum perbaikan](../../ss-codingan-sebelum/java/prak06-Mobil.png)
+
+#### Sesudah
+
+![Kode Mobil.java sesudah perbaikan](../../ss-codingan-sesudah/java/prak06-Mobil.png)
+
+### PHP — abstraksi.php
+
+#### Sebelum
+
+![Kode abstraksi.php sebelum perbaikan](../../ss-codingan-sebelum/php/prak06-abstraksi.png)
+
+#### Sesudah
+
+![Kode abstraksi.php sesudah perbaikan](../../ss-codingan-sesudah/php/prak06-abstraksi.png)
+
 ### Kesimpulan
 
 Interface memisahkan kemampuan kendaraan, abstract class menampung perilaku dasar, enum mengelola jenis bahan bakar, dan trait berbagi perilaku logging. Hasil setelah perbaikan menunjukkan perilaku gerak, pengisian bahan bakar, dan biaya yang sesuai implementasi.

@@ -51,6 +51,28 @@ PHP memuat kelas abstrak `Pegawai` dan turunannya. Gaji tetap memakai tunjangan 
 
 ![Hasil PHP setelah perbaikan](../../ssan-setelah/ssan-php-setelah/prak-setelah-php-04.png)
 
+## Screenshot kode sumber
+
+### Java — PegawaiTetap.java
+
+#### Sebelum
+
+![Kode PegawaiTetap.java sebelum perbaikan](../../ss-codingan-sebelum/java/prak04-PegawaiTetap.png)
+
+#### Sesudah
+
+![Kode PegawaiTetap.java sesudah perbaikan](../../ss-codingan-sesudah/java/prak04-PegawaiTetap.png)
+
+### PHP — Pegawai.php
+
+#### Sebelum
+
+![Kode Pegawai.php sebelum perbaikan](../../ss-codingan-sebelum/php/prak04-Pegawai.png)
+
+#### Sesudah
+
+![Kode Pegawai.php sesudah perbaikan](../../ss-codingan-sesudah/php/prak04-Pegawai.png)
+
 ### Kesimpulan
 
 Pewarisan memungkinkan kelas turunan menggunakan data dan perilaku dasar dari induknya, lalu menambahkan aturan gaji khusus. Hasil setelah perbaikan menunjukkan perhitungan gaji tidak lagi bernilai nol.

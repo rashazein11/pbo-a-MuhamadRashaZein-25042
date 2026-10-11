@@ -51,6 +51,28 @@ Implementasi PHP menggunakan constructor dengan saldo awal opsional, named const
 
 ![Hasil PHP setelah perbaikan](../../ssan-setelah/ssan-php-setelah/prak-setelah-php-03.png)
 
+## Screenshot kode sumber
+
+### Java — RekeningBank.java
+
+#### Sebelum
+
+![Kode RekeningBank.java sebelum perbaikan](../../ss-codingan-sebelum/java/prak03-RekeningBank.png)
+
+#### Sesudah
+
+![Kode RekeningBank.java sesudah perbaikan](../../ss-codingan-sesudah/java/prak03-RekeningBank.png)
+
+### PHP — RekeningBank.php
+
+#### Sebelum
+
+![Kode RekeningBank.php sebelum perbaikan](../../ss-codingan-sebelum/php/prak03-RekeningBank.png)
+
+#### Sesudah
+
+![Kode RekeningBank.php sesudah perbaikan](../../ss-codingan-sesudah/php/prak03-RekeningBank.png)
+
 ### Kesimpulan
 
 Versi PHP membuat tiga rekening dan menjalankan operasi sesuai aturan. Pada hasil Java setelah, penghitung masih menunjukkan 2, bukan 3; tangkapan layar mencatat keluaran program yang tersedia.

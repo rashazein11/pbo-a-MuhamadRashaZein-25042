@@ -51,6 +51,28 @@ PHP menggunakan properti `readonly`, validasi rentang nilai, dan perhitungan den
 
 ![Hasil PHP setelah perbaikan](../../ssan-setelah/ssan-php-setelah/prak-setelah-php-02.png)
 
+## Screenshot kode sumber
+
+### Java — Mahasiswa.java
+
+#### Sebelum
+
+![Kode Mahasiswa.java sebelum perbaikan](../../ss-codingan-sebelum/java/prak02-Mahasiswa.png)
+
+#### Sesudah
+
+![Kode Mahasiswa.java sesudah perbaikan](../../ss-codingan-sesudah/java/prak02-Mahasiswa.png)
+
+### PHP — Mahasiswa.php
+
+#### Sebelum
+
+![Kode Mahasiswa.php sebelum perbaikan](../../ss-codingan-sebelum/php/prak02-Mahasiswa.png)
+
+#### Sesudah
+
+![Kode Mahasiswa.php sesudah perbaikan](../../ss-codingan-sesudah/php/prak02-Mahasiswa.png)
+
 ### Kesimpulan
 
 Setelah perbaikan, kedua program menghasilkan nilai akhir dan huruf mutu, serta menolak nilai di luar rentang dan NIM kosong.
