@@ -52,6 +52,9 @@ Tanda kutip wajib karena nama folder memuat `&`.
 | 04 | `cd pertemuan04/Pewarisan/java`<br>`javac *.java && java Main` | `php pertemuan04/Pewarisan/php/main.php` |
 | 05 | `cd pertemuan05`<br>`javac *.java && java Main` (juga `java AntiPattern`) | `php pertemuan05/main.php`<br>`php pertemuan05/notifikasi.php` |
 | 06 | `cd pertemuan06/06-abstract-class-interface-enum-dan-trait/starter/java`<br>`javac *.java && java -Dfile.encoding=UTF-8 Main` | `php pertemuan06/06-abstract-class-interface-enum-dan-trait/starter/php/main.php` |
+| 07 | `cd pertemuan07/starter/java`<br>`javac -d out $(find . -name "*.java")`<br>`java -cp out Main` | `php pertemuan07/starter/php/main.php` |
+
+Untuk UML praktikum 07, buka diagram kerangka di `pertemuan07/starter/uml/perpustakaan-kerangka.puml`.
 
 ## 3. Cara run — SESUDAH
 
@@ -64,6 +67,9 @@ Dari folder `pbo-a-MuhamadRashaZein-25042/pbo-a-MuhamadRashaZein-25042/`.
 | 04 | `cd prak04` (perintah sama) | `php src/php/main.php` |
 | 05 | `cd prak05` (perintah sama)<br>tambahan: `java -cp bin AntiPattern`, `java -cp bin AntiPatternRefaktor` | `php src/php/main.php`<br>`php src/php/BangunDatar.php`<br>`php src/php/notifikasi.php` |
 | 06 | `cd prak06`<br>`javac -d bin src/java/*.java`<br>`java -Dfile.encoding=UTF-8 -cp bin Main` | `php src/php/main.php` |
+| 07 | `cd prak07`<br>`javac -d bin $(find src/java -name "*.java")`<br>`java -cp bin Main` | `php src/php/main.php` |
+
+Untuk UML praktikum 07, buka diagram di `prak07/src/uml/perpustakaan-kerangka.puml`.
 
 ## 4. Yang di-screenshot & hasil yang diharapkan
 
@@ -76,10 +82,11 @@ Hasil di bawah sudah saya jalankan sendiri (JDK 21, PHP 8.3).
 | 04 | Java & PHP: semua gaji `Rp0` | Java: Ani `7,800,000`, total `12,800,000`. PHP: 4 pegawai, total `26.440.000,00` |
 | 05 | Java & PHP: luas/keliling `0.00` | Java: Lingkaran 153.94, Persegi 25.00, total 178.94. PHP: + Segitiga 6.00, total 184.94 |
 | 06 | Java: `(TODO 1 belum dikerjakan)`, biaya `Rp0`. PHP: label kosong `?`, biaya `Rp0` | Java: Avanza & Polygon, biaya `Rp540,000`. PHP: biaya `Rp450.000` + bagian Trait |
+| 07 | Java: buku `0 bab`, jurusan `0 mahasiswa`, dan koleksi bab berhasil diubah dari luar. PHP: buku `0 bab`, jurusan `0 mahasiswa`. UML: diagram masih berupa kerangka TODO dengan relasi `Koleksi`–`Bab` yang keliru. | Java & PHP: buku memiliki 3 bab, jurusan terisi 2 mahasiswa lalu 1 setelah Budi keluar; objek Budi tetap ada. Java juga menolak perubahan bab dari luar. UML: diagram relasi komposisi, agregasi, asosiasi, dan dependensi sudah dilengkapi. |
 
 ## 6. Screenshot kode sumber Java & PHP
 
-Screenshot kode dari VS Code  untuk file inti praktikum 02–06 disimpan terpisah:
+Screenshot kode dari VS Code  untuk file inti praktikum 02–07 disimpan terpisah:
 
 - `ss-codingan-sebelum/java/` dan `ss-codingan-sebelum/php/`
 - `ss-codingan-sesudah/java/` dan `ss-codingan-sesudah/php/`
