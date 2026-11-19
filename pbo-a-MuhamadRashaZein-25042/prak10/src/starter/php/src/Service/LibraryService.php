@@ -9,7 +9,7 @@ use Perpustakaan\Exception\BatasPinjamTerlampauiException;
 
 final class LibraryService
 {
-    public const int BATAS_PINJAM = 3;
+    public const BATAS_PINJAM = 3;
 
     /** @var array<string, int> */
     private array $stok = [];
