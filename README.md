@@ -17,11 +17,12 @@
 │       │       └── starter/
 │       │           ├── java/
 │       │           └── php/
-│       └── pertemuan10/
-│           └── starter/
-│               ├── java/
-│               ├── php/
-│               └── skenario-uji.md
+│       ├── pertemuan10/
+│       │   └── starter/
+│       │       ├── java/
+│       │       ├── php/
+│       │       └── skenario-uji.md
+│       └── pertemuan11/
 │
 ├── pbo-a-MuhamadRashaZein-25042/
 │   ├── prak01/
@@ -40,21 +41,26 @@
 │   │       ├── model/
 │   │       ├── service/
 │   │       └── util/
-│   └── prak10/
-│       └── src/starter/
-│           ├── java/
-│           │   ├── pom.xml
-│           │   └── src/main/java/id/ac/univpancasila/perpustakaan/
-│           │       ├── Main.java
-│           │       ├── exception/
-│           │       └── service/
-│           ├── php/
-│           │   ├── composer.json
-│           │   ├── Main.php
-│           │   └── src/
-│           │       ├── Exception/
-│           │       └── Service/
-│           └── skenario-uji.md
+│   ├── prak10/
+│   │   └── src/starter/
+│   │       ├── java/
+│   │       │   ├── pom.xml
+│   │       │   └── src/main/java/id/ac/univpancasila/perpustakaan/
+│   │       │       ├── Main.java
+│   │       │       ├── exception/
+│   │       │       └── service/
+│   │       ├── php/
+│   │       │   ├── composer.json
+│   │       │   ├── Main.php
+│   │       │   └── src/
+│   │       │       ├── Exception/
+│   │       │       └── Service/
+│   │       └── skenario-uji.md
+│   └── prak11/
+│       ├── README.md
+│       └── src/
+│           ├── java/ (Repository.java, RepositoryTest.java)
+│           └── php/ (Buku.php, KoleksiBuku.php, KoleksiBukuTest.php)
 │
 ├── ss-codingan-sebelum/
 │   ├── java/
@@ -90,6 +96,7 @@ Gunakan tanda kutip jika membuka path folder tersebut dari root repository karen
 | 08 | Tidak ada folder praktikum 08 pada materi sebelum. | — |
 | 09 | Starter Java masih berupa template Maven dengan TODO; belum siap dijalankan. | Starter PHP berisi template Composer dan panduan struktur, belum ada program utama untuk dijalankan. |
 | 10 | Starter berisi kerangka exception dan `LibraryServiceKotor.java`; belum merupakan aplikasi lengkap yang bisa dijalankan langsung. | Starter berisi kerangka exception dan `LibraryServiceKotor.php`; belum merupakan aplikasi lengkap yang bisa dijalankan langsung. |
+| 11 | Folder materi sesi 11 tersedia; perintah run versi sebelum belum dirangkum di sini. | Folder materi sesi 11 tersedia; perintah run versi sebelum belum dirangkum di sini. |
 
 Untuk UML praktikum 07, buka diagram kerangka di `pertemuan07/starter/uml/perpustakaan-kerangka.puml`.
 
@@ -108,12 +115,13 @@ Dari folder `pbo-a-MuhamadRashaZein-25042/` di root repository.
 | 08 | `cd prak08/UTS_PBO_A_4525210042_mUHAMAD-RASHA-ZEIN/java`<br>`javac -d out *.java`<br>`java -cp out Main` | — |
 | 09 | Belum bisa dijalankan langsung: folder `prak09` saat ini belum memiliki struktur proyek lengkap maupun `pom.xml`. | — |
 | 10 | `cd prak10/src/starter/java`<br>`mvn clean compile exec:java` | `cd prak10/src/starter/php`<br>`composer install` (pertama kali)<br>`php Main.php` |
+| 11 | `cd prak11`<br>`javac -d bin src/java/Repository.java`<br>Kompilasi kelas saja; test JUnit perlu dependensi dan belum ada konfigurasi Maven. | `cd prak11`<br>`php -l src/php/Buku.php`<br>`php -l src/php/KoleksiBuku.php`<br>`php -l src/php/KoleksiBukuTest.php`<br>Belum ada program utama; test PHPUnit perlu konfigurasi autoload dan dependensi. |
 
 Untuk UML praktikum 07, buka diagram di `prak07/src/uml/perpustakaan-kerangka.puml`.
 
 ## 4. Yang di-screenshot & hasil yang diharapkan
 
-Hasil praktikum 02–07 sudah saya jalankan sendiri (JDK 21, PHP 8.3). Program Java praktikum 08 dan Java/PHP praktikum 10 juga sudah diuji.
+Hasil praktikum 02–07 sudah saya jalankan sendiri (JDK 21, PHP 8.3). Program Java praktikum 08 dan Java/PHP praktikum 10 juga sudah diuji; demo PHP praktikum 10 dijalankan pada PHP 8.4. Konstanta batas pinjam PHP tidak menggunakan typed class constant sehingga kompatibel dengan PHP sebelum 8.3.
 
 | Pert. | SEBELUM (screenshot ini) | SESUDAH (screenshot ini) |
 |---|---|---|
@@ -126,6 +134,7 @@ Hasil praktikum 02–07 sudah saya jalankan sendiri (JDK 21, PHP 8.3). Program J
 | 08 | — (praktikum UTS ini tidak memiliki folder versi sebelum) | Java: 4 transaksi parkir berhasil; total biaya motor Rp7.500 dan Rp12.500, mobil Rp105.000 dan Rp120.000. |
 | 09 | Java: compile gagal dengan 43 error karena package `model` tidak ditemukan. | Screenshot menunjukkan program perpustakaan berhasil berjalan: 3 buku, 3 anggota, 2 transaksi, dan denda Rp5.000. Catatan: folder `prak09` saat ini belum memiliki proyek Maven lengkap sehingga hasil belum dapat dijalankan ulang dari folder tersebut. |
 | 10 | Java dan PHP: peminjaman berhasil, tetapi kegagalan tidak menjelaskan penyebabnya; implementasi exception masih menampilkan beberapa pesan `TODO`. | Java: peminjaman berhasil, lalu menampilkan alasan spesifik saat batas pinjam tercapai, stok habis, ISBN tidak ditemukan, atau anggota belum terdaftar. PHP: tujuh percobaan demo menunjukkan peminjaman berhasil dan empat jenis kegagalan domain; laporan berhasil diekspor dan berkas ditutup di `finally`. |
+| 11 | Java: implementasi repository dan test masih berupa TODO. PHP: operasi koleksi dan test masih berupa TODO. | Java: `Repository<T>` mendukung simpan, pencarian, penghapusan, dan daftar tak-berubah; tersedia 8 kasus uji. PHP: `KoleksiBuku` mendukung pencarian, filter, map, penjumlahan, pengelompokan, iterasi, dan `count()`; tersedia 10 kasus uji. Detail implementasi ada di [README Praktikum 11](pbo-a-MuhamadRashaZein-25042/prak11/README.md). |
 
 ## 5. Lokasi screenshot
 
@@ -134,9 +143,9 @@ Screenshot hasil program ditata menurut bahasa dan tahap pengerjaan:
 - Sebelum: `ssan-sebelum/images-java/` dan `ssan-sebelum/images-php/`.
 - Sesudah: `ssan-setelah/ssan-java-setelah/` dan `ssan-setelah/ssan-php-setelah/`.
 
-Screenshot kode dari VS Code untuk praktikum 02–07 dan 09–10 disimpan di:
+Screenshot kode dari VS Code untuk praktikum 02–07 dan 09–11 disimpan di:
 
 - Sebelum: `ss-codingan-sebelum/java/` dan `ss-codingan-sebelum/php/`.
 - Sesudah: `ss-codingan-sesudah/java/` dan `ss-codingan-sesudah/php/`.
 
-Screenshot kode dan output UTS praktikum 08 berada di `prak08/UTS_PBO_A_4525210042_mUHAMAD-RASHA-ZEIN/screenshots/`. Nama file screenshot menunjukkan kelas atau program yang ditampilkan. Screenshot khusus praktikum 10 memakai awalan `prak10-` untuk kode dan `10` untuk hasil program.
+Screenshot kode dan output UTS praktikum 08 berada di `prak08/UTS_PBO_A_4525210042_mUHAMAD-RASHA-ZEIN/screenshots/`. Nama file screenshot menunjukkan kelas atau program yang ditampilkan. Screenshot praktikum 10 memakai awalan `prak10-` untuk kode dan `10` untuk hasil program, sedangkan praktikum 11 memakai awalan `prak11-` untuk kode dan `11` untuk hasil program.
